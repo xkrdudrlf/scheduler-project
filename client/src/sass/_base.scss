@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.daily-schedule {
+  display: flex;
+  min-width: 800px;
+  min-height: 600px;
+  margin: 30px;
+  border: 5px solid black;
+  &-display {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid black;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      #date {
+        font-size: 1.8rem;
+      }
+      .save-schedule {
+        font-size: 1.5rem;
+        padding: 10px;
+      }
+    }
+
+    .tasks {
+      .task {
+        display: flex;
+        width: 100%;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        &-time {
+          width: 170px;
+        }
+        &-content {
+          flex: 1;
+        }
+        .delete-task {
+          width: 25px;
+        }
+      }
+    }
+  }
+  &-input {
+    flex: 1;
+    padding: 20px;
+
+    .form {
+      .input {
+        margin-bottom: 30px;
+        label {
+          display: block;
+          font-size: 1.5rem;
+          margin-bottom: 15px;
+        }
+        input {
+          height: 40px;
+          padding: 10px;
+          font-size: 1.3rem;
+        }
+        #time-start {
+          margin-right: 10px;
+        }
+        #time-end {
+          margin-left: 10px;
+        }
+        #task {
+          padding: 10px;
+          font-size: 1.3rem;
+        }
+      }
+      .add-task {
+        justify-self: flex-end;
+        padding: 8px 10px;
+        font-size: 1.2rem;
+        border-radius: 5px;
+      }
+    }
+  }
+}
