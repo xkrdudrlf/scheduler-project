@@ -7,3 +7,5 @@ Started Date: 27/6/2021
 #### 27/06/2021 : created client/server structure and installed required packages for each directory.
 
 #### 28/06/2021 : created daily schedule input view. Need to link it to the backend.
+
+#### 29/06/2021 : Refactored "client" codebase according to MVC Pattern. Need to link it to the server now.
