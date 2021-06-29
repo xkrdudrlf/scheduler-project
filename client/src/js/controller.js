@@ -1,30 +1,33 @@
-const dailyScheduleInputForm = document.querySelector(".form");
-const inputStartTime = document.querySelector("#time-start");
-const inputEndTime = document.querySelector("#time-end");
-const inputTask = document.querySelector("#task");
-const taskTable = document.querySelector(".tasks");
+import * as model from "./model";
+import dailyScheduleView from "./views/DailyScheduleView";
 
-dailyScheduleInputForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  addTask();
-});
+const controlDailySchedule = () => {
+  model.loadDailySchedule();
+  dailyScheduleView.render(model.dailySchedule);
+};
 
-function addTask() {
-  const startTime = inputStartTime.value;
-  const endTime = inputEndTime.value;
-  const task = inputTask.value;
-  taskTable.insertAdjacentHTML(
-    "beforeend",
-    generateTask(startTime, endTime, task)
-  );
-}
+const controlAddTask = (task) => {
+  model.addTask(task);
+};
 
-function generateTask(startTime, endTime, task) {
-  return `
-    <div class="task">
-      <div class="task-time">${startTime} ~ ${endTime}</div>
-      <div class="task-content">${task}</div>
-      <button class="delete-task">X</button>
-    </div>
-  `;
-}
+const controlRemoveTask = (task) => {
+  model.removeTask(task);
+};
+
+const controlUpdateDate = (date) => {
+  model.updateDate(date);
+};
+
+const controlSave = () => {
+  model.save();
+};
+
+const init = function () {
+  dailyScheduleView.addHandlerRender(controlDailySchedule);
+  dailyScheduleView.addHandlerAddTask(controlAddTask);
+  dailyScheduleView.addHandlerRemoveTask(controlRemoveTask);
+  dailyScheduleView.addHandlerUpdateDate(controlUpdateDate);
+  dailyScheduleView.addHandlerSave(controlSave);
+};
+
+init();

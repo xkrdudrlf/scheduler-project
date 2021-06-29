@@ -41,7 +41,13 @@
   flex: 1;
 }
 .daily-schedule-display .tasks .task .delete-task {
-  width: 25px;
+  width: 40px;
+  border: none;
+  font-weight: bold;
+  background-color: pink;
+}
+.daily-schedule-display .tasks .task .delete-task:hover {
+  opacity: 0.8;
 }
 .daily-schedule-input {
   flex: 1;

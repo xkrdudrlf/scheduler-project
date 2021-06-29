@@ -40,7 +40,13 @@
           flex: 1;
         }
         .delete-task {
-          width: 25px;
+          width: 40px;
+          border: none;
+          font-weight: bold;
+          background-color: pink;
+          &:hover {
+            opacity: 0.8;
+          }
         }
       }
     }

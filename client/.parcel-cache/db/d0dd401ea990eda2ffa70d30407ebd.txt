@@ -1,12 +1,14 @@
-20575
+20578
 58/home/tom/projects/scheduler/client/dist/index.3ebff041.js1624870302581768400 0
 62/home/tom/projects/scheduler/client/dist/index.3ebff041.js.map1624870302581768400 0
-40/home/tom/projects/scheduler/client/dist1624871539681768400 1
+40/home/tom/projects/scheduler/client/dist1624967789056766600 1
+69/home/tom/projects/scheduler/client/src/js/views/DailyScheduleView.js1624967702696766600 0
 71/home/tom/projects/scheduler/client/node_modules/resolve-from/readme.md1493365924000000000 0
 70/home/tom/projects/scheduler/client/node_modules/resolve-from/index.js1493366146000000000 0
 74/home/tom/projects/scheduler/client/node_modules/resolve-from/package.json1624840306640000000 0
 84/home/tom/projects/scheduler/client/node_modules/core-js/modules/es.object.create.js499162500000000000 0
 87/home/tom/projects/scheduler/client/node_modules/core-js/modules/es.typed-array.some.js499162500000000000 0
+48/home/tom/projects/scheduler/client/src/js/views1624940776203711000 1
 87/home/tom/projects/scheduler/client/node_modules/core-js/modules/es.string.fontcolor.js499162500000000000 0
 90/home/tom/projects/scheduler/client/node_modules/core-js/modules/esnext.array.last-item.js499162500000000000 0
 84/home/tom/projects/scheduler/client/node_modules/core-js/modules/esnext.map.merge.js499162500000000000 0
@@ -1364,6 +1366,7 @@
 102/home/tom/projects/scheduler/client/node_modules/caniuse-lite/data/features/css-overscroll-behavior.js499162500000000000 0
 90/home/tom/projects/scheduler/client/node_modules/caniuse-lite/data/features/sql-storage.js499162500000000000 0
 87/home/tom/projects/scheduler/client/node_modules/caniuse-lite/data/features/webauthn.js499162500000000000 0
+51/home/tom/projects/scheduler/client/src/js/model.js1624967779826766600 0
 101/home/tom/projects/scheduler/client/node_modules/caniuse-lite/data/features/contentsecuritypolicy2.js499162500000000000 0
 94/home/tom/projects/scheduler/client/node_modules/caniuse-lite/data/features/media-fragments.js499162500000000000 0
 89/home/tom/projects/scheduler/client/node_modules/caniuse-lite/data/features/ogg-vorbis.js499162500000000000 0
@@ -2792,7 +2795,7 @@
 109/home/tom/projects/scheduler/client/node_modules/postcss-reduce-transforms/node_modules/color-name/.npmignore1435528315000000000 0
 62/home/tom/projects/scheduler/client/node_modules/color/LICENSE499162500000000000 0
 106/home/tom/projects/scheduler/client/node_modules/postcss-reduce-transforms/node_modules/color-name/test.js1500156819000000000 0
-55/home/tom/projects/scheduler/client/src/sass/_base.scss1624869927131768400 0
+55/home/tom/projects/scheduler/client/src/sass/_base.scss1624929523473711000 0
 65/home/tom/projects/scheduler/client/node_modules/cssesc/README.md499162500000000000 0
 108/home/tom/projects/scheduler/client/node_modules/postcss-reduce-transforms/node_modules/color-name/README.md1489460043000000000 0
 93/home/tom/projects/scheduler/client/node_modules/stylehacks/node_modules/postcss/lib/input.js499162500000000000 0
@@ -5072,7 +5075,7 @@
 56/home/tom/projects/scheduler/client/node_modules/esutils1624840309040000000 1
 78/home/tom/projects/scheduler/client/node_modules/domhandler/lib/index.d.ts.map499162500000000000 0
 71/home/tom/projects/scheduler/client/node_modules/domhandler/lib/node.js499162500000000000 0
-56/home/tom/projects/scheduler/client/src/js/controller.js1624871539601768400 0
+56/home/tom/projects/scheduler/client/src/js/controller.js1624967788896766600 0
 83/home/tom/projects/scheduler/client/node_modules/core-js/features/symbol/dispose.js499162500000000000 0
 77/home/tom/projects/scheduler/client/node_modules/core-js/features/unescape.js499162500000000000 0
 74/home/tom/projects/scheduler/client/node_modules/domhandler/lib/index.d.ts499162500000000000 0
@@ -6930,7 +6933,7 @@
 73/home/tom/projects/scheduler/client/node_modules/repeat-element/README.md499162500000000000 0
 95/home/tom/projects/scheduler/client/node_modules/csso/node_modules/css-tree/dist/csstree.min.js499162500000000000 0
 80/home/tom/projects/scheduler/client/node_modules/csso/node_modules/css-tree/data1624840298960000000 1
-63/home/tom/projects/scheduler/client/dist/index.1206e35b.css.map1624871539681768400 0
+63/home/tom/projects/scheduler/client/dist/index.1206e35b.css.map1624967789046766600 0
 98/home/tom/projects/scheduler/client/node_modules/postcss-minify-gradients/node_modules/chalk/types1624840298330000000 1
 88/home/tom/projects/scheduler/client/node_modules/css-tree/lib/syntax/atrule/font-face.js499162500000000000 0
 78/home/tom/projects/scheduler/client/node_modules/es-abstract/2016/IsInteger.js499162500000000000 0
@@ -6990,7 +6993,7 @@
 95/home/tom/projects/scheduler/client/node_modules/is-negative-zero/.github/workflows/node-4+.yml499162500000000000 0
 83/home/tom/projects/scheduler/client/node_modules/regenerator-transform/src/visit.js499162500000000000 0
 97/home/tom/projects/scheduler/client/node_modules/is-negative-zero/.github/workflows/node-zero.yml499162500000000000 0
-51/home/tom/projects/scheduler/client/dist/index.html1624871539671768400 0
+51/home/tom/projects/scheduler/client/dist/index.html1624967789046766600 0
 100/home/tom/projects/scheduler/client/node_modules/core-js/modules/esnext.iterator.as-indexed-pairs.js499162500000000000 0
 79/home/tom/projects/scheduler/client/node_modules/core-js/stable/array/reduce.js499162500000000000 0
 86/home/tom/projects/scheduler/client/node_modules/postcss-modules/build/css-loader-core1624840294000000000 1
@@ -7511,7 +7514,7 @@
 128/home/tom/projects/scheduler/client/node_modules/postcss-normalize-display-values/node_modules/chalk/node_modules/supports-color1624840307510000000 1
 102/home/tom/projects/scheduler/client/node_modules/@babel/plugin-transform-classes/lib/transformClass.js456789000000000000 0
 103/home/tom/projects/scheduler/client/node_modules/csso/node_modules/css-tree/lib/syntax/config/walker.js499162500000000000 0
-62/home/tom/projects/scheduler/client/dist/index.250b04c7.js.map1624871539681768400 0
+62/home/tom/projects/scheduler/client/dist/index.250b04c7.js.map1624967789056766600 0
 104/home/tom/projects/scheduler/client/node_modules/snapdragon/node_modules/source-map/lib/binary-search.js1492467891000000000 0
 84/home/tom/projects/scheduler/client/node_modules/@babel/plugin-transform-classes/lib1624840294650000000 1
 84/home/tom/projects/scheduler/client/node_modules/is-generator-function/.eslintignore499162500000000000 0
@@ -7587,7 +7590,7 @@
 66/home/tom/projects/scheduler/client/node_modules/lodash/groupBy.js499162500000000000 0
 68/home/tom/projects/scheduler/client/node_modules/unpipe/package.json1624840305380000000 0
 84/home/tom/projects/scheduler/client/node_modules/es-abstract/2020/Number/multiply.js499162500000000000 0
-54/home/tom/projects/scheduler/client/src/sass/main.scss1624869931511768400 0
+54/home/tom/projects/scheduler/client/src/sass/main.scss1624929122213711000 0
 101/home/tom/projects/scheduler/client/node_modules/@babel/highlight/node_modules/color-convert/index.js499162500000000000 0
 100/home/tom/projects/scheduler/client/node_modules/postcss-modules/node_modules/color-convert/route.js499162500000000000 0
 106/home/tom/projects/scheduler/client/node_modules/postcss-discard-empty/node_modules/supports-color/license499162500000000000 0
@@ -12439,7 +12442,7 @@
 84/home/tom/projects/scheduler/client/node_modules/crypto-browserify/example/bundle.js1413408258000000000 0
 88/home/tom/projects/scheduler/client/node_modules/jsdom/lib/jsdom/browser/parser/index.js499162500000000000 0
 65/home/tom/projects/scheduler/client/node_modules/defaults/LICENSE1443824587000000000 0
-46/home/tom/projects/scheduler/client/index.html1624870347581768400 0
+46/home/tom/projects/scheduler/client/index.html1624953480583963600 0
 81/home/tom/projects/scheduler/client/node_modules/object-copy/node_modules/kind-of1624840308410000000 1
 71/home/tom/projects/scheduler/client/node_modules/escalade/dist/index.js499162500000000000 0
 70/home/tom/projects/scheduler/client/node_modules/os-browserify/main.js1492659193000000000 0
@@ -12662,7 +12665,7 @@
 65/home/tom/projects/scheduler/client/node_modules/@parcel/core/src1624840296770000000 1
 93/home/tom/projects/scheduler/client/node_modules/purgecss/node_modules/postcss/lib/comment.js499162500000000000 0
 86/home/tom/projects/scheduler/client/node_modules/source-map-resolve/lib/resolve-url.js499162500000000000 0
-59/home/tom/projects/scheduler/client/dist/index.1206e35b.css1624871539671768400 0
+59/home/tom/projects/scheduler/client/dist/index.1206e35b.css1624967789046766600 0
 67/home/tom/projects/scheduler/client/node_modules/core-js/stage/0.js499162500000000000 0
 106/home/tom/projects/scheduler/client/node_modules/regenerate-unicode-properties/Script_Extensions/Chakma.js499162500000000000 0
 102/home/tom/projects/scheduler/client/node_modules/caniuse-lite/data/features/document-evaluate-xpath.js499162500000000000 0
@@ -17962,7 +17965,7 @@
 75/home/tom/projects/scheduler/client/node_modules/component-emitter/index.js1555360001000000000 0
 78/home/tom/projects/scheduler/client/node_modules/icss-utils/node_modules/chalk1624840308870000000 1
 73/home/tom/projects/scheduler/client/node_modules/utils-merge/package.json1624840305180000000 0
-42/home/tom/projects/scheduler/client/src/js1624803427961834500 1
+42/home/tom/projects/scheduler/client/src/js1624941780003711000 1
 71/home/tom/projects/scheduler/client/node_modules/utils-merge/.npmignore1505866465000000000 0
 61/home/tom/projects/scheduler/client/node_modules/loader-utils1624840308520000000 1
 77/home/tom/projects/scheduler/client/node_modules/generic-names/.idea/misc.xml499162500000000000 0
@@ -20426,7 +20429,7 @@
 78/home/tom/projects/scheduler/client/node_modules/browserify-aes/modes/index.js499162500000000000 0
 75/home/tom/projects/scheduler/client/node_modules/es-abstract/2019/ToInt8.js499162500000000000 0
 85/home/tom/projects/scheduler/client/node_modules/es-abstract/2019/IteratorComplete.js499162500000000000 0
-58/home/tom/projects/scheduler/client/dist/index.250b04c7.js1624871539671768400 0
+58/home/tom/projects/scheduler/client/dist/index.250b04c7.js1624967789046766600 0
 110/home/tom/projects/scheduler/client/node_modules/postcss-normalize-url/node_modules/postcss/lib/lazy-result.js499162500000000000 0
 91/home/tom/projects/scheduler/client/node_modules/uncss/node_modules/postcss-selector-parser1624840305430000000 1
 89/home/tom/projects/scheduler/client/node_modules/es-abstract/2019/CreateMethodProperty.js499162500000000000 0

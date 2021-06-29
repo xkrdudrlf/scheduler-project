@@ -442,37 +442,219 @@ id) /*: string*/
 }
 
 },{}],"3miIZ":[function(require,module,exports) {
-const dailyScheduleInputForm = document.querySelector(".form");
-const inputStartTime = document.querySelector("#time-start");
-const inputEndTime = document.querySelector("#time-end");
-const inputTask = document.querySelector("#task");
-const taskTable = document.querySelector(".tasks");
+var _model = require("./model");
+var _viewsDailyScheduleView = require("./views/DailyScheduleView");
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _viewsDailyScheduleViewDefault = _parcelHelpers.interopDefault(_viewsDailyScheduleView);
+const controlDailySchedule = () => {
+  _model.loadDailySchedule();
+  _viewsDailyScheduleViewDefault.default.render(_model.dailySchedule);
+};
+const controlAddTask = task => {
+  _model.addTask(task);
+};
+const controlRemoveTask = task => {
+  _model.removeTask(task);
+};
+const controlUpdateDate = date => {
+  _model.updateDate(date);
+};
+const controlSave = () => {
+  _model.save();
+};
+const init = function () {
+  _viewsDailyScheduleViewDefault.default.addHandlerRender(controlDailySchedule);
+  _viewsDailyScheduleViewDefault.default.addHandlerAddTask(controlAddTask);
+  _viewsDailyScheduleViewDefault.default.addHandlerRemoveTask(controlRemoveTask);
+  _viewsDailyScheduleViewDefault.default.addHandlerUpdateDate(controlUpdateDate);
+  _viewsDailyScheduleViewDefault.default.addHandlerSave(controlSave);
+};
+init();
 
-dailyScheduleInputForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  addTask();
+},{"./model":"1hp6y","./views/DailyScheduleView":"7xgm9","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"1hp6y":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "dailySchedule", function () {
+  return dailySchedule;
 });
+_parcelHelpers.export(exports, "loadDailySchedule", function () {
+  return loadDailySchedule;
+});
+_parcelHelpers.export(exports, "addTask", function () {
+  return addTask;
+});
+_parcelHelpers.export(exports, "removeTask", function () {
+  return removeTask;
+});
+_parcelHelpers.export(exports, "updateDate", function () {
+  return updateDate;
+});
+_parcelHelpers.export(exports, "save", function () {
+  return save;
+});
+const dailySchedule = {
+  date: "",
+  tasks: []
+};
+const loadDailySchedule = () => {
+  dailySchedule.date = "2021-06-29";
+  [{
+    time: {
+      start: "08:00",
+      end: ""
+    },
+    content: "Wake up"
+  }, {
+    time: {
+      start: "08:00",
+      end: "08:50"
+    },
+    content: "Breakfast & Shower"
+  }].forEach(task => {
+    dailySchedule.tasks.push(task);
+  });
+};
+const addTask = task => {
+  dailySchedule.tasks.push(task);
+  console.log(dailySchedule);
+};
+const removeTask = task => {
+  const i = dailySchedule.tasks.findIndex(t => t.time.start === task.time.start && t.time.end === task.time.end && t.content === task.content);
+  if (i < 0) return console.log(`Cannot find a task : "${task.start} ~ ${task.end}, ${task.content}"`);
+  dailySchedule.tasks.splice(i, 1);
+};
+const updateDate = date => {
+  dailySchedule.date = date;
+  console.log(dailySchedule);
+};
+const save = () => {
+  console.log("Sent dailySchedule Info to the backend server !!");
+};
 
-function addTask() {
-  const startTime = inputStartTime.value;
-  const endTime = inputEndTime.value;
-  const task = inputTask.value;
-  taskTable.insertAdjacentHTML(
-    "beforeend",
-    generateTask(startTime, endTime, task)
-  );
+},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5gA8y":[function(require,module,exports) {
+"use strict";
+
+exports.interopDefault = function (a) {
+  return a && a.__esModule ? a : {
+    default: a
+  };
+};
+
+exports.defineInteropFlag = function (a) {
+  Object.defineProperty(a, '__esModule', {
+    value: true
+  });
+};
+
+exports.exportAll = function (source, dest) {
+  Object.keys(source).forEach(function (key) {
+    if (key === 'default' || key === '__esModule') {
+      return;
+    } // Skip duplicate re-exports when they have the same value.
+
+
+    if (key in dest && dest[key] === source[key]) {
+      return;
+    }
+
+    Object.defineProperty(dest, key, {
+      enumerable: true,
+      get: function () {
+        return source[key];
+      }
+    });
+  });
+  return dest;
+};
+
+exports.export = function (dest, destName, get) {
+  Object.defineProperty(dest, destName, {
+    enumerable: true,
+    get: get
+  });
+};
+},{}],"7xgm9":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+class DailyScheduleView {
+  _date = document.querySelector("#date");
+  _taskTable = document.querySelector(".tasks");
+  _dailyScheduleInputForm = document.querySelector(".form");
+  render(data) {
+    this._date.value = data.date;
+    data.tasks.forEach(task => {
+      this._addTask(task.time.start, task.time.end, task.content);
+    });
+  }
+  addHandlerRender(handler) {
+    window.addEventListener("load", handler);
+  }
+  addHandlerAddTask(handler) {
+    this._dailyScheduleInputForm.addEventListener("submit", e => {
+      e.preventDefault();
+      const form = e.target.elements;
+      const startTime = form["time-start"].value;
+      const endTime = form["time-end"].value;
+      const content = form["task"].value;
+      this._addTask(startTime, endTime, content);
+      handler({
+        time: {
+          start: startTime,
+          end: endTime
+        },
+        content
+      });
+    });
+  }
+  addHandlerRemoveTask(handler) {
+    this._taskTable.addEventListener("click", e => {
+      if (!e.target.classList.contains("delete-task")) return;
+      const task = e.target.closest(".task");
+      const [startTime, endTime] = task.querySelector(".task-time").textContent.split(" ~ ");
+      const content = task.querySelector(".task-content").textContent;
+      handler({
+        time: {
+          start: startTime,
+          end: endTime
+        },
+        content
+      });
+      task.remove();
+    });
+  }
+  addHandlerUpdateDate(handler) {
+    this._date.addEventListener("change", e => {
+      handler(e.target.value);
+    });
+  }
+  addHandlerSave(handler) {
+    document.querySelector(".save-schedule").addEventListener("click", e => {
+      handler();
+    });
+  }
+  _addTask(startTime, endTime, content) {
+    this._taskTable.insertAdjacentElement("beforeend", this._generateTask(startTime, endTime, content));
+  }
+  _generateTask(startTime, endTime, content) {
+    const taskDiv = document.createElement("div");
+    taskDiv.classList.add("task");
+    const taskTime = document.createElement("div");
+    taskTime.classList.add("task-time");
+    taskTime.textContent = `${startTime} ~ ${endTime}`;
+    const taskContent = document.createElement("div");
+    taskContent.classList.add("task-content");
+    taskContent.textContent = content;
+    const deleteTaskBtn = document.createElement("button");
+    deleteTaskBtn.textContent = "X";
+    deleteTaskBtn.classList.add("delete-task");
+    taskDiv.appendChild(taskTime);
+    taskDiv.appendChild(taskContent);
+    taskDiv.appendChild(deleteTaskBtn);
+    return taskDiv;
+  }
 }
+exports.default = new DailyScheduleView();
 
-function generateTask(startTime, endTime, task) {
-  return `
-    <div class="task">
-      <div class="task-time">${startTime} ~ ${endTime}</div>
-      <div class="task-content">${task}</div>
-      <button class="delete-task">X</button>
-    </div>
-  `;
-}
-
-},{}]},["7BONy","3miIZ"], "3miIZ", "parcelRequiref125")
+},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}]},["7BONy","3miIZ"], "3miIZ", "parcelRequiref125")
 
 //# sourceMappingURL=index.250b04c7.js.map
