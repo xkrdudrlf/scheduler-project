@@ -43,6 +43,39 @@ export const updateDate = (date) => {
   console.log(dailySchedule);
 };
 
-export const save = () => {
-  console.log("Sent dailySchedule Info to the backend server !!");
+export const save = async () => {
+  fetch("http://localhost:3000", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(dailySchedule),
+  });
 };
+
+// export const save = async () => {
+//   console.log(JSON.stringify(dailySchedule));
+//   const url = `http://localhost:3000`;
+//   const options = {
+//     method: "post",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     mode: "no-cors",
+//     body: JSON.stringify(dailySchedule),
+//   };
+//   const res = await fetch(url, options);
+//   console.log("response:", res);
+// };
+
+/*
+fetch('https://example.com/profile', {
+  method: 'POST', // or 'PUT'
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+const myHeaders = new Headers();
+myHeaders.append('Content-Type', 'text/plain');
+*/

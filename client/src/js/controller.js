@@ -18,8 +18,8 @@ const controlUpdateDate = (date) => {
   model.updateDate(date);
 };
 
-const controlSave = () => {
-  model.save();
+const controlSave = async () => {
+  await model.save();
 };
 
 const init = function () {

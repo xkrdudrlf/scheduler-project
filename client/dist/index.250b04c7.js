@@ -459,8 +459,8 @@ const controlRemoveTask = task => {
 const controlUpdateDate = date => {
   _model.updateDate(date);
 };
-const controlSave = () => {
-  _model.save();
+const controlSave = async () => {
+  await _model.save();
 };
 const init = function () {
   _viewsDailyScheduleViewDefault.default.addHandlerRender(controlDailySchedule);
@@ -527,8 +527,14 @@ const updateDate = date => {
   dailySchedule.date = date;
   console.log(dailySchedule);
 };
-const save = () => {
-  console.log("Sent dailySchedule Info to the backend server !!");
+const save = async () => {
+  fetch("http://localhost:3000", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(dailySchedule)
+  });
 };
 
 },{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5gA8y":[function(require,module,exports) {
